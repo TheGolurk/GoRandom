@@ -14,7 +14,7 @@ import (
 
 func main() {
 
-	db, err := sql.Open("mysql", "user_area:user1area2#@(mysql.area.ingenieriaacustica.cl)/db_area?parseTime=true")
+	db, err := sql.Open("mysql", "user:password@(host)/db-name?parseTime=true")
 	defer db.Close()
 	if err != nil {
 		log.Fatal(err)
