@@ -5,3 +5,11 @@
 More stuff
 -> If the server crashes, hits an exception or is terminated by the server (for example when
 a docker pod is scaled down) it will attempt to flush the current stream.
+
+json:
+{
+	"text": "hello world", 
+	"content_id": 1, 
+	"client_id": 2, 
+	"timestamp": "Saturday, 04-Apr-20 08:43:00 UTC"
+}
