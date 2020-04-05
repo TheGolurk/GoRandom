@@ -1,0 +1,7 @@
+[]Create a server using fasthttp
+[]Create another service to send it a simple JSON
+[]Stream the data to AWS in ndjson format with gzip compression
+
+More stuff
+-> If the server crashes, hits an exception or is terminated by the server (for example when
+a docker pod is scaled down) it will attempt to flush the current stream.

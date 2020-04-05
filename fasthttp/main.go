@@ -3,9 +3,17 @@ package main
 import (
 	"fmt"
 	"log"
+	"time"
 
 	"github.com/valyala/fasthttp"
 )
+
+type req struct {
+	text      string
+	contentID int64
+	clientID  int
+	timeStamp time.Time
+}
 
 func main() {
 
@@ -18,6 +26,8 @@ func main() {
 
 func requestHandler(ctx *fasthttp.RequestCtx) {
 	fmt.Fprintf(ctx, "Hello, world!\n\n")
+	lol := string(ctx.PostBody())
+	fmt.Println(lol)
 
 	fmt.Fprintf(ctx, "Request method is %q\n", ctx.Method())
 	fmt.Fprintf(ctx, "RequestURI is %q\n", ctx.RequestURI())
